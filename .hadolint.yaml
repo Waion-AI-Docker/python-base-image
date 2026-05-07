@@ -1,0 +1,15 @@
+# Hadolint Configuration
+# https://github.com/hadolint/hadolint
+
+# Trusted registries for base images
+trustedRegistries:
+  - docker.io
+  - ghcr.io
+
+# Ignore specific rules
+ignored:
+  - DL3018  # Alpine package versions change frequently with updates
+  - DL3022  # COPY --from should reference a previously defined FROM alias
+
+# Strict mode: fail on any warning
+failure-threshold: warning
